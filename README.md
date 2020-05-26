@@ -1,0 +1,3 @@
+# mercadito
+
+Aplicación web eCommerce

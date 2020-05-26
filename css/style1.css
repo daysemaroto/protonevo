@@ -1,0 +1,128 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: 0.75rem;
+}
+
+.refer{
+  color: #62b345;
+}
+
+.refer:hover{
+  color: #62b345;
+}
+
+.controlador{
+  align-items: center;
+}
+
+body{
+  font-family: Corben, sans-serif;
+}
+
+h4{
+  color: #4b4644;
+  margin-top: -20px;  
+}
+
+.fondo{
+  bottom: 0%;
+  right: 0%;
+  height: 5px;
+}
+
+h3 h4{
+  font-family: Corben, sans-serif;
+}
+
+.login,
+.image {
+  min-height: 100vh;
+}
+
+.bg-image {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/mercadito-2020.appspot.com/o/Merkadito%20logo%2Fportada%2FPortada_inicio.svg?alt=media&token=abca232f-f324-421d-a27a-fa5cfd1a121c');
+  background-size: cover;
+  background-position: center;
+}
+
+.login-heading {
+  font-weight: 300;
+}
+
+.btn-login {
+  font-size: 0.75rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background-color: #ffffff;
+  border-color: #62b345;
+  color: #62b345;
+}
+
+.btn-regist {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  background-color: #9ebd45;
+  color: #ffffff;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.form-control, .chequear{
+  background-color: #dedede;
+}
+
+.acept{
+  align-items: center;
+  font-weight: bold;
+}
+
+.etiquet{
+  font-size: 0.9rem;
+}
+
+.fondche{
+  color: #dedede;
+}
+
+.inp1{
+  margin-top: -10px;
+}
+
+form{
+  margin-top: -10px;
+}
+
+.log-image{
+  margin-top: -20px;
+}
+/* Fallback for Edge
+-------------------------------------------------- */
+
+@supports (-ms-ime-align: auto) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input::-ms-input-placeholder {
+    color: #777;
+  }
+}
+
+/* Fallback for IE
+-------------------------------------------------- */
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {
+  .form-label-group>label {
+    display: none;
+  }
+  .form-label-group input:-ms-input-placeholder {
+    color: #777;
+  }
+}

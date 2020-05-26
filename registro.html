@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style1.css">
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+  <!-- access to firestore -->
+  <script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+  <!-- for user authentication -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+
+
+
+
+  <title>Registro</title>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row no-gutter">
+      <div class="d-none d-md-flex col-md-4 col-lg-8 bg-image"></div>
+      <div class="col-md-8 col-lg-4">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-8 col-lg-10 mx-auto">
+                <div class="text-center log-image">
+                  <img src="img/logo-sin-fondo.png" width="170">
+                  <h3 class="login-heading mb-4">Iniciar Sesión</h3>
+                  <h4 class="login-heading mb-4 small">Merkadito de frutas y verduras</h4>
+                </div>
+                <form>
+                  <div class="form-label-group">
+                    <label for="inputNombre" class="small etiquet">Nombre:</label>
+                    <input type="text" id="inputNombre" class="form-control inp1" required autofocus>
+                    <div class="alerta-error" id="alerta-error-nombre">Ingrese un nombre válido</div>
+                  </div>
+                  <div class="form-label-group">
+                    <label for="inputApellido" class="small etiquet">Apellidos:</label>
+                    <input type="text" id="inputApellido" class="form-control inp1" required autofocus>
+                  </div>
+                  <div class="form-label-group">
+                    <label for="inputTelefono" class="small etiquet">Teléfonos:</label>
+                    <input type="text" id="inputTelefono" class="form-control inp1" required autofocus>
+                  </div>
+                  <div class="form-label-group">
+                    <label for="inputNombre" class="small etiquet">E-Mail:</label>
+                    <input type="email" id="inputEmail" class="form-control inp1" required autofocus>
+                  </div>
+                  <div class="form-label-group">
+                    <label for="inputPassword" class="etiquet">Contraseña:</label>
+                    <input type="password" id="inputPassword" class="form-control inp1" required>
+                  </div>
+                  <div class="form-label-group">
+                    <label for="inputRepPassword" class="etiquet">Confirmar Contraseña:</label>
+                    <input type="password" id="inputRepPassword" class="form-control inp1" required>
+                  </div>
+                  <div class="acept custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input fondche" id="customCheck1">
+                    <label class="custom-control-label etiquet" for="customCheck1">Acepto todos los terminos y
+                      condiciones</label>
+                  </div>
+                  <div class="text-center">
+                    <a class="btn btn-regist btn-lg btn-block font-weight-bold mb-4" onclick="registrar()" id="bton-registrar">Registrar</a>
+                  </div>
+                  <div class="text-center mb-3">
+                    <a class="small refer" href="login.html">Ya tengo una cuenta</a>
+                  </div>
+                  <div class="fondo">
+                    <div class="text-center">
+                      <label class="small">Mercadito</label>
+                    </div>
+                    <div class="text-center">
+                      <label class="small">© Merkadito 2020 - Todos los derechos reservados</label>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/firebaseConfig.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  
+</body>
+
+</html>
