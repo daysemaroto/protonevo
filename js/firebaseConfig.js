@@ -31,14 +31,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    // document.getElementById('login').innerHTML =
-    //   `<div>
-    // <p>Logueado como `+ user.email + `<p>
-    // <button type="button" class="btn btn-danger" onclick="cerrar()">Cerrar sesion</button>
-    // </div>
-    // `;
-  } else {
-    // document.getElementById('login').innerHTML = "";
+    window.location="prueba.html";
   }
 });
 
@@ -86,14 +79,15 @@ function registrar() {
 }
 
 //Funcion cerrar sesion
-function cerrar() {
+function cerrarSesion() {
   firebase.auth().signOut()
     .then(function () {
       console.log('Salir');
-      mostrarCamposRegistro();
+      //window.location="login.html";    
+      //mostrarCamposRegistro();
     })
     .catch(function (error) {
-      ocultarCamposRegistro();
+      //ocultarCamposRegistro();
       alert(error.message);
     })
 }
@@ -105,9 +99,7 @@ function iniciarSesion() {
   firebase.auth().signInWithEmailAndPassword(email, pass)
     .then(function () {
       // ocultarCamposRegistro();
-      console.log("entre aqui");
-      alert("entre al login");
-      window.location="prueba.html";
+ //     window.location="prueba.html";
 
     })
     .catch(function (error) {
@@ -115,13 +107,13 @@ function iniciarSesion() {
       var errorMessage = error.message;
       // mostrarCamposRegistro();
       if (error.code == "auth/invalid-email") {
-        alert("La dirección de correo electrónico no tiene el formato correcto.");
+        console.log("La dirección de correo electrónico no tiene el formato correcto.");
       }
       else if (error.code == "auth/wrong-password") {
-        alert("Contraseña incorrecta.");
+        console.log("Contraseña incorrecta.");
       }
       else {
-        alert(errorMessage);
+        console.log(errorMessage);
       }
     });
     

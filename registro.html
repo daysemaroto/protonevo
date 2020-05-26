@@ -50,34 +50,58 @@
                   <h4 class="login-heading mb-4 small">Merkadito de frutas y verduras</h4>
                 </div>
                 <form>
-                  <div class="form-label-group">
-                    <label for="inputNombre" class="small etiquet">Nombre:</label>
-                    <input type="text" id="inputNombre" class="form-control inp1" required autofocus>
+
+                  <div>
+                    <div class="form-label-group">
+                      <label for="inputNombre" class="small etiquet">Nombre:</label>
+                      <input type="text" id="inputNombre" class="form-control inp1" required autofocus>
+                    </div>
                     <div class="alerta-error" id="alerta-error-nombre">Ingrese un nombre válido</div>
                   </div>
-                  <div class="form-label-group">
-                    <label for="inputApellido" class="small etiquet">Apellidos:</label>
-                    <input type="text" id="inputApellido" class="form-control inp1" required autofocus>
+
+                  <div>
+                    <div class="form-label-group">
+                      <label for="inputApellido" class="small etiquet">Apellidos:</label>
+                      <input type="text" id="inputApellido" class="form-control inp1" required autofocus>
+                    </div>
+                    <div class="alerta-error" id="alerta-error-apellido">Ingrese un apellido válido</div>
                   </div>
-                  <div class="form-label-group">
-                    <label for="inputTelefono" class="small etiquet">Teléfonos:</label>
-                    <input type="text" id="inputTelefono" class="form-control inp1" required autofocus>
+
+                  <div>
+                    <div class="form-label-group">
+                      <label for="inputTelefono" class="small etiquet">Teléfonos:</label>
+                      <input type="text" id="inputTelefono" class="form-control inp1" required autofocus>
+                    </div>
+                    <div class="alerta-error" id="alerta-error-telefono">Ingrese un telefono válido</div>
                   </div>
-                  <div class="form-label-group">
-                    <label for="inputNombre" class="small etiquet">E-Mail:</label>
-                    <input type="email" id="inputEmail" class="form-control inp1" required autofocus>
+
+                  <div>
+                    <div class="form-label-group">
+                      <label for="inputNombre" class="small etiquet">E-Mail:</label>
+                      <input type="email" id="inputEmail" class="form-control inp1" required autofocus>
+                    </div>
+                    <div class="alerta-error" id="alerta-error-email">Ingrese un correo válido</div>
                   </div>
-                  <div class="form-label-group">
-                    <label for="inputPassword" class="etiquet">Contraseña:</label>
-                    <input type="password" id="inputPassword" class="form-control inp1" required>
+
+                  <div>
+                    <div class="form-label-group">
+                      <label for="inputPassword" class="etiquet">Contraseña:</label>
+                      <input type="password" id="inputPassword" class="form-control inp1" required>
+                    </div>
+                    <div class="alerta-error" id="alerta-error-long">Debe tener almenos 6 digitos</div>
                   </div>
-                  <div class="form-label-group">
-                    <label for="inputRepPassword" class="etiquet">Confirmar Contraseña:</label>
-                    <input type="password" id="inputRepPassword" class="form-control inp1" required>
+
+                  <div>
+                    <div class="form-label-group">
+                      <label for="inputRepPassword" class="etiquet">Confirmar Contraseña:</label>
+                      <input type="password" id="inputRepPassword" class="form-control inp1" required>
+                    </div>
+                    <div class="alerta-error" id="alerta-error-reply">Ingrese nuevamente su contraseña</div>
                   </div>
+
                   <div class="acept custom-control custom-checkbox mb-3">
                     <input type="checkbox" class="custom-control-input fondche" id="customCheck1">
-                    <label class="custom-control-label etiquet" for="customCheck1">Acepto todos los terminos y
+                    <label class="custom-control-label etiquet" for="customCheck1" id="customCheckMensaje">Acepto todos los terminos y
                       condiciones</label>
                   </div>
                   <div class="text-center">

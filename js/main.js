@@ -15,7 +15,7 @@ function remcl(){
 //Validaciones de campos
 
 function validacionCamposVacios(){
-	let parent = this.parentNode.parentNode.parentNode;
+	let parent = this.parentNode.parentNode;
 	if(this.value != ""){
 		$(parent).children(".alerta-error").hide();
 	}
@@ -40,100 +40,101 @@ function validacionCamposVacios(){
 
 
 function validacionContraseña(){
-	let parent = document.getElementById("inputRepPassword").parentNode.parentNode.parentNode;
+	let parent = document.getElementById("inputRepPassword").parentNode.parentNode;
 
 	let pass = document.getElementById("inputPassword").value;
 	let pass_retry = document.getElementById("inputRepPassword").value;
 
 	if(pass!=""&&pass==pass_retry){
-		$(parent).children("#alerta-error-reply").hide();
+		$(parent).children("#alerta-error-reply").css("visibility","hidden");
 		return true;
 	}
 	else{
-		$(parent).children("#alerta-error-reply").show();
+		$(parent).children("#alerta-error-reply").css("visibility","visible");
 		return false;
 	}
 }
 
 function validacionCorreo(){
-	let parent = document.getElementById("inputEmail").parentNode.parentNode.parentNode;
+	let parent = document.getElementById("inputEmail").parentNode.parentNode;
 	let correo = document.getElementById("inputEmail").value;
 
 	re=/^.+@.+\..*$/
 	if(!re.exec(correo)){
-		$(parent).children("#alerta-error-email").show();
+		$(parent).children("#alerta-error-email").css("visibility","visible");
 		return false;
 	}
 	else{
-		$(parent).children("#alerta-error-email").hide();
+		$(parent).children("#alerta-error-email").css("visibility","hidden");
 		return true;
 	}
 }
 
 function validacionNombre(){
-	let parent =  document.getElementById("inputNombre").parentNode.parentNode.parentNode;
+	let parent =  document.getElementById("inputNombre").parentNode.parentNode;
 	let valor = document.getElementById("inputNombre").value;
 
 	re=/^([a-zA-ZÀ-ÿ\u00f1\u00d1]+\s*)+$/
 	if(!re.exec(valor)){
-		$(parent).children("#alerta-error-nombre").show();
+		$(parent).children("#alerta-error-nombre").css("visibility","visible");
 		return false;
 	}
 	else{
-		$(parent).children("#alerta-error-nombre").hide();
+		$(parent).children("#alerta-error-nombre").css("visibility","hidden");
 		return true;
 	}
 }
 
 
 function validacionApellido(){
-	let parent = document.getElementById("inputApellido").parentNode.parentNode.parentNode;
+	let parent = document.getElementById("inputApellido").parentNode.parentNode;
 	let valor = document.getElementById("inputApellido").value;
 
 	re=/^([a-zA-ZÀ-ÿ\u00f1\u00d1]+\s*)+$/
 	if(!re.exec(valor)){
-		$(parent).children("#alerta-error-apellido").show();
+		$(parent).children("#alerta-error-apellido").css("visibility","visible");
 		return false;
 	}
 	else{
-		$(parent).children("#alerta-error-apellido").hide();
+		$(parent).children("#alerta-error-apellido").css("visibility","hidden");
 		return true;
 	}
 }
 
 function validacionTelefono(){
-	let parent = document.getElementById("inputTelefono").parentNode.parentNode.parentNode;
+	let parent = document.getElementById("inputTelefono").parentNode.parentNode;
 	let valor = document.getElementById("inputTelefono").value;
 
 	re=/^[0-9]+$/
 	if(!re.exec(valor)){
-		$(parent).children("#alerta-error-telefono").show();
+		$(parent).children("#alerta-error-telefono").css("visibility","visible");
 		return false;
 	}
 	else{
-		$(parent).children("#alerta-error-telefono").hide();
+		$(parent).children("#alerta-error-telefono").css("visibility","hidden");
 		return true;
 	}
 }
 
 
 function validarContraseñaLong(){
-	let parent = document.getElementById("inputEmail").parentNode.parentNode.parentNode;
-	let pass = document.getElementById("inputEmail").value;
+	let parent = document.getElementById("inputPassword").parentNode.parentNode;
+	let pass = document.getElementById("inputPassword").value;
 
 	if(pass.length < 6){
-		$(parent).children("#alerta-error-long").show();
+		$(parent).children("#alerta-error-long").css("visibility","visible");
 		return false;
 	}
 	else{
-		$(parent).children("#alerta-error-long").hide();
+		$(parent).children("#alerta-error-long").css("visibility","hidden");
 		return true;
 	}
 }
 
 function validarTerminos(){
-	let terminos = document.getElementById("checkbox-terminos").checked;
-	let mensaje = document.getElementById("contenedor-terminos");
+	let terminos = document.getElementById("customCheck1").checked;
+	let mensaje = document.getElementById("customCheckMensaje");
+	console.log(mensaje);
 	if(!terminos){
 		mensaje.style.color="red";
 		return false;
@@ -152,9 +153,9 @@ function validarTodosCampos(){
 	// var val5 = validacionDireccion();
 	var val6 = validarContraseñaLong();
 	var val7 = validacionContraseña();
-	// var val8 = validarTerminos();
+	var val8 = validarTerminos();
 
-	return val1&&val2&&val3&&val4&&val6&&val7;
+	return val1&&val2&&val3&&val4&&val6&&val7&&val8;
 }
 
 //Agregando validaciones a los elementos
@@ -162,7 +163,6 @@ function validarTodosCampos(){
 inputs.forEach(input => {
 	input.addEventListener("focus", addcl);
 	input.addEventListener("blur", remcl);
-//	input.addEventListener("blur", validacionCamposVacios);
 });
 
 document.getElementById("inputPassword").addEventListener("blur",validarContraseñaLong);
@@ -171,6 +171,3 @@ document.getElementById("inputEmail").addEventListener("blur",validacionCorreo);
 document.getElementById("inputNombre").addEventListener("blur",validacionNombre);
 document.getElementById("inputApellido").addEventListener("blur",validacionApellido);
 document.getElementById("inputTelefono").addEventListener("blur",validacionTelefono);
-// document.getElementById("direccion").addEventListener("blur",validacionDireccion);
-// document.getElementById("checkbox-terminos").addEventListener("click",validarTerminos);
-//document.getElementById("bton-registrar").addEventListener("mouseover",validarTodosCampos);
