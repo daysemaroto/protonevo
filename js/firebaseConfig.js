@@ -31,7 +31,7 @@ firebase.auth().onAuthStateChanged(function (user) {
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-    window.location="prueba.html";
+     window.location="prueba.html";
   }
 });
 
@@ -83,7 +83,7 @@ function cerrarSesion() {
   firebase.auth().signOut()
     .then(function () {
       console.log('Salir');
-      //window.location="login.html";    
+      window.location="login.html";    
       //mostrarCamposRegistro();
     })
     .catch(function (error) {
