@@ -70,6 +70,7 @@ function validacionCorreo(){
 	}
 }
 
+
 function validacionNombre(){
 	let parent =  document.getElementById("inputNombre").parentNode.parentNode;
 	let valor = document.getElementById("inputNombre").value;

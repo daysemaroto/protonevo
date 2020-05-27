@@ -46,11 +46,14 @@
                   <h4 class="login-heading mb-4 small">Merkadito de frutas y verduras</h4>
                 </div>
                 <form>
-                  <div class="form-label-group">
-                    <label for="inputEmail">Usuario:</label>
-                    <input type="email" id="inputEmail" class="form-control" required autofocus>
-                  </div>
 
+                <div>
+                    <div class="form-label-group">
+                      <label for="inputEmailLogin">Usuario:</label>
+                      <input type="email" id="inputEmailLogin" class="form-control" required autofocus>
+                    </div>
+                    <div class="alerta-error" id="alerta-error-email-login" style="visibility:hidden">Ingrese un correo válido</div>
+                </div>
                   <div class="form-label-group">
                     <label for="inputPassword">Contraseña:</label>
                     <input type="password" id="inputPassword" class="form-control" required>
@@ -61,7 +64,7 @@
                         <a class="small refer" href="#">¿Olvidó su contraseña?</a>
                       </div>
                       <div class="col mb-3">
-                        <button type="submit" class="btn btn-lg btn-block btn-login font-weight-bold mb-2" onclick="iniciar()">Iniciar Sesión</button>
+                        <button type="button" class="btn btn-lg btn-block btn-login font-weight-bold mb-2" onclick="iniciar()">Iniciar Sesión</button>
                       </div>
                     </div>
                   </div>
@@ -99,6 +102,8 @@
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
     crossorigin="anonymous"></script>
   <script type="text/javascript" src="js/firebaseConfig.js"></script>
+  <script type="text/javascript" src="js/validacionLogin.js"></script>
+
  
 </body>
 
