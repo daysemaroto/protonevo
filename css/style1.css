@@ -86,6 +86,10 @@ display: flex;
   align-items: center;
 }
 
+#container-all{
+ padding-top: 50px; 
+} 
+
 .form-label-group {
   position: relative;
   margin-bottom: 1rem;
