@@ -31,8 +31,8 @@ firebase.auth().onAuthStateChanged(function (user) {
     var isAnonymous = user.isAnonymous;
     var uid = user.uid;
     var providerData = user.providerData;
-     window.location="prueba.html";
   }
+
 });
 
 
@@ -75,7 +75,6 @@ function registrar() {
         }
       });
   }
-  // window.location="login.html";
 }
 
 //Funcion cerrar sesion
@@ -83,8 +82,8 @@ function cerrarSesion() {
   firebase.auth().signOut()
     .then(function () {
       console.log('Salir');
-      window.location="login.html";    
-      //mostrarCamposRegistro();
+      window.location="login.html";
+     // mostrarCamposRegistro();
     })
     .catch(function (error) {
       //ocultarCamposRegistro();
@@ -93,13 +92,13 @@ function cerrarSesion() {
 }
 
 //Funcion iniciar sesion
-function iniciarSesion() {
+function iniciar() {
   var email = document.getElementById('inputEmail').value;
   var pass = document.getElementById('inputPassword').value;
   firebase.auth().signInWithEmailAndPassword(email, pass)
     .then(function () {
       // ocultarCamposRegistro();
- //     window.location="prueba.html";
+      window.location="prueba.html";
 
     })
     .catch(function (error) {
