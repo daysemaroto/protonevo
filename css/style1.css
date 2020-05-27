@@ -20,6 +20,10 @@ body{
   font-weight: bold;
 }
 
+.text-center a{
+  font-size: 8em;
+} 
+
 h4{
   color: #4b4644;
   margin-top: -20px;  
