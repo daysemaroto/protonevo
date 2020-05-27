@@ -95,27 +95,28 @@ function cerrarSesion() {
 function iniciar(){
   var email = document.getElementById('inputEmailLogin').value;
   var pass = document.getElementById('inputPasswordLogin').value;
-  firebase.auth().signInWithEmailAndPassword(email, pass)
-    .then(function () {
-      // ocultarCamposRegistro();
-      window.location="prueba.html";
+  if(validacionCorreoLogin()){
+    firebase.auth().signInWithEmailAndPassword(email, pass)
+      .then(function () {
+        // ocultarCamposRegistro();
+        window.location="prueba.html";
 
-    })
-    .catch(function (error) {
-      var errorCode = error.code;
-      var errorMessage = error.message;
-      // mostrarCamposRegistro();
-      if (error.code == "auth/invalid-email") {
-        console.log("La dirección de correo electrónico no tiene el formato correcto.");
-      }
-      else if (error.code == "auth/wrong-password") {
-        console.log("Contraseña incorrecta.");
-      }
-      else {
-        console.log(errorMessage);
-      }
-    });
-    
+      })
+      .catch(function (error) {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // mostrarCamposRegistro();
+        if (error.code == "auth/invalid-email") {
+          console.log("La dirección de correo electrónico no tiene el formato correcto.");
+        }
+        else if (error.code == "auth/wrong-password") {
+          console.log("Contraseña incorrecta.");
+        }
+        else {
+          console.log(errorMessage);
+        }
+      });
+  }
 }
 
 function mostrarCamposRegistro() {

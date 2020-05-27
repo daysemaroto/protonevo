@@ -13,5 +13,3 @@ function validacionCorreoLogin(){
 		return true;
 	}
 }
-
-document.getElementById("inputEmailLogin").addEventListener("blur",validacionCorreoLogin);
