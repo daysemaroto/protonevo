@@ -79,7 +79,9 @@ h3 h4{
   
 }
 #btnRegistrate {
-align-items:center;
+display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-label-group {
