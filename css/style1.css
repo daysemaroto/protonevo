@@ -15,7 +15,11 @@
 .controlador{
   align-items: center;
 }
-
+#bton-registrar{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 body{
   font-family: Corbel, sans-serif;
   font-weight: bold;
