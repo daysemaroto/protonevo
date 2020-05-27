@@ -21,7 +21,8 @@ body{
 }
 
 #btnRegistrate {
-  width: 5px;
+  width: 15px;
+  align-items: center;
 } 
 
 h4{
