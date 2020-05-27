@@ -92,9 +92,9 @@ function cerrarSesion() {
 }
 
 //Funcion iniciar sesion
-function iniciar() {
-  var email = document.getElementById('inputEmail').value;
-  var pass = document.getElementById('inputPassword').value;
+function iniciar(){
+  var email = document.getElementById('inputEmailLogin').value;
+  var pass = document.getElementById('inputPasswordLogin').value;
   firebase.auth().signInWithEmailAndPassword(email, pass)
     .then(function () {
       // ocultarCamposRegistro();
