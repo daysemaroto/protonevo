@@ -75,6 +75,7 @@ h3 h4{
   border-radius: 6px;
   background-color: #9ebd45;
   color: #ffffff;
+  width: max-content;
 }
 
 .form-label-group {
