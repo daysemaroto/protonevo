@@ -5,6 +5,7 @@
 
 .refer{
   color: #62b345;
+  font-size: medium;
 }
 
 .refer:hover{
@@ -69,7 +70,6 @@ h3 h4{
 
 .btn-regist {
   letter-spacing: 0.05rem;
-  padding: 0.75rem 1rem;
   border-radius: 6px;
   background-color: #9ebd45;
   color: #ffffff;
