@@ -82,7 +82,7 @@ function cerrarSesion() {
   firebase.auth().signOut()
     .then(function () {
       console.log('Salir');
-      window.location="login.html";
+      window.location="index.html";
      // mostrarCamposRegistro();
     })
     .catch(function (error) {
