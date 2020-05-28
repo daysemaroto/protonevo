@@ -2,6 +2,9 @@
   --input-padding-x: 1.5rem;
   --input-padding-y: 0.75rem;
 }
+#imagen_mercadito{
+ width: 8rem; 
+}
 
 .refer{
   color: #62b345;
